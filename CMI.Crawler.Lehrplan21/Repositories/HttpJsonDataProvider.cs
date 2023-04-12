@@ -1,6 +1,7 @@
+using CMI.Crawler.Lehrplan21.Models;
 using System.Web;
 
-namespace CMI.Crawler.Lehrplan21;
+namespace CMI.Crawler.Lehrplan21.Repositories;
 
 public class HttpJsonDataProvider : IJsonDataProvider
 {

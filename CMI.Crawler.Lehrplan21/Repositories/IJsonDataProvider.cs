@@ -1,4 +1,6 @@
-namespace CMI.Crawler.Lehrplan21;
+using CMI.Crawler.Lehrplan21.Models;
+
+namespace CMI.Crawler.Lehrplan21.Repositories;
 
 public interface IJsonDataProvider
 {

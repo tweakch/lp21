@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Threading.Channels;
+using CMI.Crawler.Lehrplan21.Models;
 using Microsoft.VisualStudio.Threading;
 
 namespace CMI.Crawler.Lehrplan21;

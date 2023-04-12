@@ -1,5 +1,6 @@
 using System.Threading.Channels;
 using System.Threading.Tasks.Dataflow;
+using CMI.Crawler.Lehrplan21.Services;
 using Microsoft.Extensions.Options;
 
 namespace CMI.Crawler.Lehrplan21.Workers;

@@ -1,4 +1,4 @@
-namespace CMI.Crawler.Lehrplan21;
+namespace CMI.Crawler.Lehrplan21.Services;
 
 public interface INodeDownloader
 {

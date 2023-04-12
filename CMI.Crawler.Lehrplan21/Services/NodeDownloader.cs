@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace CMI.Crawler.Lehrplan21;
+namespace CMI.Crawler.Lehrplan21.Services;
 
 public class NodeDownloader : INodeDownloader
 {

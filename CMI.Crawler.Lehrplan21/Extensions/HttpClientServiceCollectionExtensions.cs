@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace CMI.Crawler.Lehrplan21;
+namespace CMI.Crawler.Lehrplan21.Extensions;
 
 public static class HttpClientServiceCollectionExtensions
 {

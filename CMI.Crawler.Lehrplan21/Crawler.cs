@@ -1,3 +1,6 @@
+using CMI.Crawler.Lehrplan21.Models;
+using CMI.Crawler.Lehrplan21.Repositories;
+
 namespace CMI.Crawler.Lehrplan21;
 
 public class Crawler : ICrawler

@@ -1,7 +1,7 @@
 using System.Net;
 using System.Web;
 
-namespace CMI.Crawler.Lehrplan21;
+namespace CMI.Crawler.Lehrplan21.Repositories;
 
 public class LehrplanApi : ILehrplanApi
 {
@@ -32,7 +32,7 @@ public class LehrplanApi : ILehrplanApi
     public Task<HttpResponseMessage> GetAsync(string id, string language = "DE", string canton = "ZH")
     {
         UriBuilder uriBuilder = new UriBuilder($"https://api.lehrplan.ch/getData.php");
-        
+
         var query = HttpUtility.ParseQueryString(uriBuilder.Query);
         query["uid"] = id;
         query["sprache"] = language;

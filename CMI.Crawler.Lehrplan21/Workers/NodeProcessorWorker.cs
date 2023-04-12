@@ -1,5 +1,7 @@
 using System.Threading.Channels;
 using System.Web;
+using CMI.Crawler.Lehrplan21.Models;
+using CMI.Crawler.Lehrplan21.Services;
 using Microsoft.Extensions.Options;
 
 namespace CMI.Crawler.Lehrplan21.Workers;

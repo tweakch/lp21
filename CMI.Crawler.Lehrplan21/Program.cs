@@ -1,5 +1,9 @@
 using System.Threading.Channels;
 using CMI.Crawler.Lehrplan21;
+using CMI.Crawler.Lehrplan21.Extensions;
+using CMI.Crawler.Lehrplan21.Models;
+using CMI.Crawler.Lehrplan21.Repositories;
+using CMI.Crawler.Lehrplan21.Services;
 using CMI.Crawler.Lehrplan21.Workers;
 
 IHost host = Host.CreateDefaultBuilder(args)
