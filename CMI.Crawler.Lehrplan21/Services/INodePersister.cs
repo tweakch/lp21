@@ -4,5 +4,5 @@ namespace CMI.Crawler.Lehrplan21.Services;
 
 public interface INodePersister
 {
-    Task PersistNodeAsync(TreeNode node);
+    Task PersistNodeAsync(PersistContext context, CancellationToken cancellationToken);
 }

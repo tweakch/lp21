@@ -1,6 +1,8 @@
+using CMI.Crawler.Lehrplan21.Models;
+
 namespace CMI.Crawler.Lehrplan21.Services;
 
 public interface INodeDownloader
 {
-    Task<Stream> DownloadNodeAsync(string nodeId, string language, string canton);
+    Task<Stream> DownloadNodeAsync(DownloadContext context);
 }

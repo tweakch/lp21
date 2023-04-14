@@ -7,29 +7,12 @@ public class LehrplanApi : ILehrplanApi
 {
     private readonly HttpClient _client;
 
-    public LehrplanApi(IHttpClientFactory factory)
+    public LehrplanApi(HttpClient client)
     {
-        var authenticationUrl = "https://api.lehrplan.ch/login.php";
-        var authenticationData = new Dictionary<string, string>
-        {
-            { "user_id", "informatik.cmi" },
-            { "pw", "ZhMSbhaH" }
-        };
-        var handler = new HttpClientHandler
-        {
-            UseCookies = true,
-            CookieContainer = new CookieContainer()
-        };
-
-        var httpClient = new HttpClient(handler);
-        var content = new FormUrlEncodedContent(authenticationData);
-        var response = httpClient.PostAsync(authenticationUrl, content).GetAwaiter().GetResult();
-
-        _client = httpClient;
-        // _client = factory.CreateClient("AuthenticatedHttpClient");
+        _client = client;
     }
 
-    public Task<HttpResponseMessage> GetAsync(string id, string language = "DE", string canton = "ZH")
+    public Task<HttpResponseMessage> GetAsync(string id, string language = "DE", string canton = "ZH", CancellationToken canellationToken = default)
     {
         UriBuilder uriBuilder = new UriBuilder($"https://api.lehrplan.ch/getData.php");
 
@@ -39,6 +22,6 @@ public class LehrplanApi : ILehrplanApi
         query["kanton"] = canton;
         uriBuilder.Query = query.ToString();
         string requestUri = $"{uriBuilder.Scheme}://{uriBuilder.Host}{uriBuilder.Path}{uriBuilder.Query}";
-        return _client.GetAsync(requestUri);
+        return _client.GetAsync(requestUri, canellationToken);
     }
 }
